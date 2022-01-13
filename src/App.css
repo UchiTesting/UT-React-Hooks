@@ -37,6 +37,8 @@
   }
 }
 
+/* My Additions */ 
+
 nav > a {
   margin-right:5px;
   background-color: black;
@@ -67,11 +69,6 @@ nav > a:active{
   font-weight: bold;
 }
 
-code {
-  color: royalblue;
-  font-weight: bold;
-}
-
 pre{
   display: inline-block;
   text-align: start;
@@ -82,16 +79,35 @@ pre{
 }
 pre > code {
   white-space: pre;
+  background-color: transparent;
+}
+
+code {
+  color: royalblue;
 }
 
 em {
   color:red;
+}
+
+code, em {
+  white-space: nowrap;
   background-color: lightgray;
   padding: 3px;
+  margin-left: 3px;
+  margin-right: 2px;
   border-radius: 5px;
   font-weight: bold;
 }
 
 p {
   text-align: start;
+  line-height: 2em;
+}
+
+body {
+  width: 80%;
+  margin-left: 10%;
+  background-color: rgb(20,20,20);
+  color: azure;
 }
