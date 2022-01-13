@@ -7,7 +7,7 @@ const NavBar = () => {
             <Link to="/use-effect">useEffect Demo</Link>
             <Link to="/use-ref">useRef Demo</Link>
             <Link to="/use-callback">useCallback Demo</Link>
-            <Link to="/use-reducer">useReducer Demo</Link>
+            <Link to="/use-reducer">useReducer Demo</Link><br />
             <Link to="/use-memo">useMemo Demo</Link>
             <Link to="/use-layout-effect">useLayoutEffect Demo</Link>
             <Link to="/use-debug">useDebug Demo</Link>
