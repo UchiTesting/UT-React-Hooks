@@ -43,4 +43,55 @@ nav > a {
   color: lightgray;
   padding: 10px;
   border-radius: 15px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+nav > a:hover{
+  background-color: slategray;
+  color: white;
+}
+
+nav > a:active{
+  color: lemonchiffon;
+}
+
+
+.output {
+  background-color: grey;
+  opacity: 0.5;
+  width:100px;
+  margin-left:auto;
+  margin-right:auto;
+  color: white;
+  font-weight: bold;
+}
+
+code {
+  color: royalblue;
+  font-weight: bold;
+}
+
+pre{
+  display: inline-block;
+  text-align: start;
+  margin: auto;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 20px;
+}
+pre > code {
+  white-space: pre;
+}
+
+em {
+  color:red;
+  background-color: lightgray;
+  padding: 3px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+p {
+  text-align: start;
 }
