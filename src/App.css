@@ -60,11 +60,15 @@ nav > a:active{
 
 
 .output {
+  display: inline-block;
   background-color: grey;
   opacity: 0.5;
-  width:100px;
+  padding: 3px;
+  height: 2em;
+  line-height: 2em;
   margin-left:auto;
   margin-right:auto;
+  padding: 0.1em 20px;
   color: white;
   font-weight: bold;
 }
@@ -110,4 +114,43 @@ body {
   margin-left: 10%;
   background-color: rgb(20,20,20);
   color: azure;
+}
+
+kbd {
+  color: black;
+  background-color: lightgray;
+  padding: 3px;
+  border-style: outset;
+  border-width: 2px;
+  border-radius: 3px;
+}
+
+button {
+  color: white;
+  background-color: royalblue;
+  border-style: none;
+  border-radius: 5px;
+  margin-right: 0.5em;
+  padding: 0.5em;
+}
+
+input[type="time"] {
+  border-radius: 2em;
+  padding: 0.1em 0.5em;
+}
+
+input[type="time"].big-clock {
+  font-size: 1.5em; 
+  /* Edge is the least permissive and display well until that value. 
+    1.578em;
+    1.282rem;
+    20px;
+    15pt;
+  */
+
+}
+
+input[type="time"]:not(:focus).big-clock {
+  font-size: 1em;
+  line-height: 2em; /* to avoid the "pushing" effect when the element resizes. */
 }
