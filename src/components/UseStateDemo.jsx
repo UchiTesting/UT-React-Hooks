@@ -81,11 +81,15 @@ setMyState(previousState => {return {...previousState, count:count+1}});
             After clicking a first time on any increment or decrement button, it is initialised to <em>0</em>. <br />
             Then the counter is behaving as the previous one i.e. in the [0,10] range.</p>
 
-        <p className="output">{counter}</p>
+        <div>
+            <p className="output">{counter}</p>
+        </div>
         <button onClick={handleIncrement}>&#43;</button>
         <button onClick={handleDecrement}>&minus;</button>
         <button onClick={handleReset}>Reset</button><br />
-        <p className="output">{(objState.objCount || objState.objCount === 0) ? objState.objCount : "n/a"}</p>
+        <div>
+            <p className="output">{(objState.objCount || objState.objCount === 0) ? objState.objCount : "n/a"}</p>
+        </div>
         <button onClick={handleObjIncrement}>Obj &#43;</button>
         <button onClick={handleObjDecrement}>Obj &minus;</button>
         <button onClick={handleObjReset}>Obj reset</button>
