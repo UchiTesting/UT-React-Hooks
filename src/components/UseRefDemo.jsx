@@ -23,13 +23,14 @@ const UseRefDemo = () => {
 
     return (<div>
         <h2>useRef Hook</h2>
-        <p>Refs are used to keep a data  across page life-cycle. It can be anydata but more likely DOM elements.</p>
+        <p>Refs are used to keep a data  across page life-cycle. It can be any data but more likely DOM elements.</p>
         <p>It works by instanciating an identifier with the <code>useRef</code> hook to which we can provide an initial value. In the case of referencing DOM elements, that particular element must be given a <code>ref</code> attribute to which we provide the identifier defined earlier. In such case the value will be updated when the component is mounted.</p>
 
         <pre><code>{`
 const myTimeInput = useRef(null);
 // ... any code here ...
-<input ref={myTimeInput} list="remarkable-times" type="time" min="09:00" max="17:00" step="900" defaultValue="12:00" />
+<input ref={myTimeInput} list="remarkable-times" type="time" min="09:00" max="17:00" 
+    step="900" defaultValue="12:00" />
             `}</code></pre>
 
         <p>References should be avoided as much as possible and in many situations can be dealt with state instead. It is the option available when you have no other option than retrieve a DOM element similarly to <code>document.getElementById</code> for instance.</p>
