@@ -154,3 +154,14 @@ input[type="time"]:not(:focus).big-clock {
   font-size: 1em;
   line-height: 2em; /* to avoid the "pushing" effect when the element resizes. */
 }
+
+a {
+  color: royalblue;
+}
+ul>li {
+  text-align: left;
+}
+
+#demo{
+  margin: 20px;
+}
