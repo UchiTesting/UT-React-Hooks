@@ -10,6 +10,8 @@ import UseMemoDemo from './components/UseMemoDemo';
 import UseLayoutEffectDemo from './components/UseLayoutEffectDemo';
 import UseDebugDemo from './components/UseDebugDemo';
 import UseCustomDemo from './components/UseCustomDemo';
+import UseContextDemo from './components/UseContextDemo';
+import UseImperativeHandleDemo from './components/UseImperativeHandle';
 
 function App(props) {
   return (
@@ -20,12 +22,14 @@ function App(props) {
         <Route path="/" element={<UseStateDemo />} />
         <Route path="use-state" element={<UseStateDemo />} />
         <Route path="use-effect" element={<UseEffectDemo />} />
+        <Route path="use-context" element={<UseContextDemo />} />
         <Route path="use-ref" element={<UseRefDemo />} />
         <Route path="use-callback" element={<UseCallbackDemo />} />
         <Route path="use-reducer" element={<UseReducerDemo />} />
         <Route path="use-memo" element={<UseMemoDemo />} />
         <Route path="use-layout-effect" element={<UseLayoutEffectDemo />} />
         <Route path="use-debug" element={<UseDebugDemo />} />
+        <Route path="use-imperative-handle" element={<UseImperativeHandleDemo />} />
         <Route path="use-custom" element={<UseCustomDemo />} />
       </Routes>
 
