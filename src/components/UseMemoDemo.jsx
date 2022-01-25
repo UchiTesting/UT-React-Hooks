@@ -31,6 +31,13 @@ const UseMemoDemo = () => {
 
     return (<div>
         <h2>useMemo Hook</h2>
+        <div id="demo">
+            <div>
+                <input type="number" value={number} onChange={e => setNumber(parseInt(e.target.value))} />
+            </div>
+            <button onClick={() => { setDark(prevDark => !prevDark) }}>ChangeTheme</button>
+            <div style={themeStyle}>{doubleNumber}</div>
+        </div>
         <p><code>useMemo</code> hook is useful in 2 use cases:
         </p>
         <ul>
@@ -59,13 +66,6 @@ const themeStyle = useMemo(() => {
         `}</code></pre>
         <p>The first <code>useMemo</code> covers costly processing. As we watch the <code>number</code> input value to determine if we need to run the code anew.</p>
         <p>The second <code>useMemo</code> covers reference equality. Should we not wrap the <code>themeStyle</code> object into <code>useMemo</code>, we would see the <em>Theme Changed...</em> message upon updating the <code>number</code> input value though no change have been made to the theme. This is because changing that number triggers a re-render and creates a new theming object with a different reference. The code hence believes it has changed. This is simply solved by using our <code>useMemo</code> hook.</p>
-        <div id="demo">
-            <div>
-                <input type="number" value={number} onChange={e => setNumber(parseInt(e.target.value))} />
-            </div>
-            <button onClick={() => { setDark(prevDark => !prevDark) }}>ChangeTheme</button>
-            <div style={themeStyle}>{doubleNumber}</div>
-        </div>
     </div>);
 }
 

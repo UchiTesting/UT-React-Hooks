@@ -41,13 +41,15 @@ const UseEffectDemo = () => {
 
     return (<div>
         <h2>useEffect Hook</h2>
+        <div id="demo">
+            <p className="output">{`${time.h}:${(time.m < 10) ? `0${time.m}` : time.m}:${(time.s < 10) ? `0${time.s}` : time.s}`}</p>
+        </div>
         <p><code>useEffect</code> is to functional component what such methods as<code>componentDidMount</code>, <code>componentDidUpdate</code> or <code>componentDidUnmount</code> are to class components.</p>
         <p>It takes 2 arguments. 1<sup>st</sup> a function to execute. Then a <em>dependency array</em> that comprise the states to which respective changes are monitored. Should this array be empty, there is no state monitored yet it is ran once upon component mount.</p>
         <p>Should the dependency array be missing the return satatement will be executed anyway.</p>
         <p>The return statement of a <code>useEffect</code> hook is ran when the component is unmounted.</p>
         <p>To demonstrate useEffect, we will implement a chronometer.</p>
         <p>Try to observe in the console the messages indicating the unmounting took place by changing the page from the menu.</p>
-        <p className="output">{`${time.h}:${(time.m < 10) ? `0${time.m}` : time.m}:${(time.s < 10) ? `0${time.s}` : time.s}`}</p>
     </div>);
 
 }

@@ -26,6 +26,19 @@ const UseReducerDemo = () => {
     return (
         <div>
             <h2>useReducer Hook</h2>
+            <div id="demo">
+                <div>
+                    <div>
+                        <p className="output">{JSON.stringify(state)}</p>
+                    </div>
+                    <button onClick={() => dispatchCounterAction({ type: 'increment' })}>+</button>
+                    <button onClick={() => dispatchCounterAction({ type: 'decrement' })}>-</button>
+                    <button onClick={() => dispatchCounterAction({ type: 'reset' })}>C</button>
+                    <div style={{ marginTop: "10px" }}>
+                        <button onClick={() => dispatchCounterAction({ type: 'crashOnPurpose' })}>Cause an error because of unknown action (reload the page after)</button>
+                    </div>
+                </div>
+            </div>
             <p>This is an alternative to <code>useState</code> that fits more objects with properties.</p>
             <p>It somehow works like Redux reducers. The hook takes such reducer as first parameter. Reducers are functions that receive a state and action as parameters and do different things depending on the action <code>type</code> property. They must also return a new state.</p>
             <p>The second parameter is the initialisation value.</p>
@@ -61,19 +74,6 @@ const counterInit = (initValue) => { return initValue; }
 
 const [state, dispatchCounterAction] = useReducer(counterReducer, initialState, counterInit);
             `}</code></pre>
-            <div id="demo">
-                <div>
-                    <div>
-                        <p className="output">{JSON.stringify(state)}</p>
-                    </div>
-                    <button onClick={() => dispatchCounterAction({ type: 'increment' })}>+</button>
-                    <button onClick={() => dispatchCounterAction({ type: 'decrement' })}>-</button>
-                    <button onClick={() => dispatchCounterAction({ type: 'reset' })}>C</button>
-                    <div style={{ marginTop: "10px" }}>
-                        <button onClick={() => dispatchCounterAction({ type: 'crashOnPurpose' })}>Cause an error because of unknown action (reload the page after)</button>
-                    </div>
-                </div>
-            </div>
         </div>);
 }
 
