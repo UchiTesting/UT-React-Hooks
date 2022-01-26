@@ -1,3 +1,12 @@
+# React Hooks
+
+The current repository contains a React project that deals with Hooks with the purpose of learning them.
+The application have been divided in several pages that include a demo project each. Thus, it is often
+useful to open the developer tools along with using React Dev Tools (especially regarding the `useDebugValue` hook
+which is displaying data in that extension).
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
