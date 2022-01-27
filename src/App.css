@@ -175,3 +175,26 @@ ul>li {
   padding: 0px 10px;
   margin: 0px 10px 15px 10px  
 }
+
+.cat-advice {
+  position:relative;
+  background-color: dimgray;
+  border-radius: 1em;
+  padding: 10px 70px;
+  margin: 5px;
+  min-height: 2em;
+  line-height: 2em;
+}
+.cat-advice::before{
+  content: '😸';
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  font-size: 2em;
+}
+
+img{
+  border: rgba(255,255,0,0.2) 2px dotted;
+  margin:20px;
+}
