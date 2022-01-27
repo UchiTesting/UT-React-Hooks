@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useDebugValue } from "react";
 
 export default function useFetch(endPoint) {
     const [status, setStatus] = useState('idle');
     const [data, setData] = useState({});
+
+    useDebugValue({ data, status });
 
     useEffect(() => {
         const fetchData = async () => {
